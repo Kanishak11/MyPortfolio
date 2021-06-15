@@ -4,10 +4,12 @@
   "description": "Phaser 3 Project Template with custom build of Phaser",
   "main": "src/index.js",
   "scripts": {
+    "deploy": "gh-pages -d src"
     "build": "webpack --config webpack/prod.js",
     "start": "webpack-dev-server --config webpack/base.js"
   },
   "dependencies": {
+    "gh-pages": "^3.2.1",
     "phaser": "^3.21.0"
   },
   "devDependencies": {
@@ -33,5 +35,5 @@
   "bugs": {
     "url": "https://github.com/Kanishak11/MyPortfolio/issues"
   },
-  "homepage": "https://github.com/Kanishak11/MyPortfolio#readme"
+  "homepage": "https://Kanishak11.github.io/MyPortfolio"
 }
