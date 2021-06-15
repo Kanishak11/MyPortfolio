@@ -7,17 +7,6 @@
     "build": "webpack --config webpack/prod.js",
     "start": "webpack-dev-server --config webpack/base.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/photonstorm/phaser3-project-template-custom-build.git"
-  },
-  "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
-  "license": "MIT",
-  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
-  "bugs": {
-    "url": "https://github.com/photonstorm/phaser3-project-template-custom-build/issues"
-  },
-  "homepage": "https://github.com/photonstorm/phaser3-project-template-custom-build#readme",
   "dependencies": {
     "phaser": "^3.21.0"
   },
@@ -34,5 +23,15 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kanishak11/MyPortfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kanishak11/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/Kanishak11/MyPortfolio#readme"
 }
