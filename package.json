@@ -4,7 +4,7 @@
   "description": "Phaser 3 Project Template with custom build of Phaser",
   "main": "src/index.js",
   "scripts": {
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d dist",
     "build": "webpack --config webpack/prod.js",
     "start": "webpack-dev-server --config webpack/base.js"
   },

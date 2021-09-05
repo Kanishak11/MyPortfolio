@@ -11,6 +11,8 @@ class Example extends Phaser.Scene
 
     preload ()
     {
+        this.style = {  fill: '#00FFFF' };
+        this.styleOver = { fill: '#FF00FF' };
         this.load.image('block', 'assets/logo.png');
         this.load.image('face','assets/face.jpg');
         this.load.script('webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
@@ -59,7 +61,7 @@ class Example extends Phaser.Scene
         });
         var git = this.add.image(window.innerWidth*(.58 ),604,'git').setScale(0.06)
         git.setInteractive()
-        git.on('pointerup',github,this);
+        git.on('pointerup',() => {github('https://github.com/Kanishak11')},this);
         git.on('pointerover', (event)=>{
             git.setScale(0.08);
         })
@@ -71,7 +73,7 @@ class Example extends Phaser.Scene
         this.text1.setStroke('#00f', 16);
         this.text1.setShadow(2, 2, "#333333", 2, true, true);
         //text2
-        this.text2 = this.add.text(window.innerWidth*(.50), 200, "Full Stack Developer", { font: "74px Arial Black", fill: "#fff" }).setOrigin(.5);
+        this.text2 = this.add.text(window.innerWidth*(.50), 200, "Full Stack Developer ", { font: "74px Arial Black", fill: "#fff" }).setOrigin(.5);
         this.text2.setStroke('#00f', 16);
         this.text2.setShadow(2, 2, "#333333", 2, true, true);
         //text3
@@ -106,10 +108,11 @@ class Example extends Phaser.Scene
         this.text6 = this.add.text(window.innerWidth*(.5),1650, "Experiance", { font: "74px Arial Black", fill: "#fff" }).setOrigin(.5);
         this.text6.setStroke('#00f', 16);
         this.text6.setShadow(2, 2, "#333333", 2, true, true);
-        this.add.text(window.innerWidth*(.5), 1740, "(Full Stack Developer at CRIS )", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
-        this.add.text(window.innerWidth*(.5), 1790, "Created RESTful api's using Django Rest framework,Used ajax and jquery for transmitting", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
-        this.add.text(window.innerWidth*(.5), 1830, "json data objects between frontend and controller.Worked on front end framework such as", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
-        this.add.text(window.innerWidth*(.5), 1870, "bootstrap for responsive frontend and PostgreSql as a database.", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 1750, "FrontEnd Developer at Times Internet - (Present)", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 1860, "Full Stack Developer at CRIS (2019-2020)", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 1900, "Created RESTful api's using Django Rest framework,Used ajax and jquery for transmitting", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 1940, "json data objects between frontend and controller.Worked on front end framework such as", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 1980, "bootstrap for responsive frontend and PostgreSql as a database.", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
         // asteroid
         
         this.ast=this.physics.add.sprite(20,2000,'ast2'); 
@@ -160,18 +163,18 @@ class Example extends Phaser.Scene
         this.text8 = this.add.text(window.innerWidth*(.5),3050, "Projects", { font: "74px Arial Black", fill: "#fff" }).setOrigin(.5);
         this.text8.setStroke('#00f', 16);
         this.text8.setShadow(2, 2, "#333333", 2, true, true);
-        this.add.text(window.innerWidth*(.5), 3150, "MyLibrary", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 3150, "MyLibrary", { fontFamily: 'Nosifer' ,font: "40px Nosifer" ,color :"orange" , textDecoration:"underline"}).setOrigin(.5).setInteractive({cursor: './assets/cursor.png, pointer'}).on('pointerdown',()=>{ github('https://github.com/Kanishak11/MyLibrary')},this)
         this.add.text(window.innerWidth*(.5), 3210, "Created a Web application called 'MyLibrary' which shows all the books in my library. We can ", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
         this.add.text(window.innerWidth*(.5), 3250, "search , add ,delete or update the books.Implemented using Node.js, Express, and MongoDB ", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
         //pro-> space invader
-        this.add.text(window.innerWidth*(.5), 3340, "Space Invader", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 3340, "Space Invader", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5).setInteractive({cursor: './assets/cursor.png, pointer'});
         this.add.text(window.innerWidth*(.5), 3390, "It is a fun game where we need to save earth by shooting against aliens", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
         this.add.text(window.innerWidth*(.5), 3430, "Implemented using pure html ,javascript and css", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
         // pro ->toss a coin 
-        this.add.text(window.innerWidth*(.5), 3520, "Toss A Coin Using Voice", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
-        this.add.text(window.innerWidth*(.5), 3570, "Using voice to toss a coin. Used Alan AI as voice assistance. ", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
-        this.add.text(window.innerWidth*(.5), 3610, "Implemented using Javascript, Html , Css. ", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
-
+        this.add.text(window.innerWidth*(.5), 3520, "Food Ordering", { fontFamily: 'Nosifer' ,font: "40px Nosifer",color :"orange"}).setOrigin(.5).setInteractive({cursor: './assets/cursor.png, pointer'}).on('pointerdown',()=>{github('https://github.com/Kanishak11/food-app-main')},this)
+        this.add.text(window.innerWidth*(.5), 3570, "Food-Ordering app lets customer order food from multiple restaurants . Customers can ", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
+        this.add.text(window.innerWidth*(.5), 3620, " add or remove food from cart and order the food.", { fontFamily: 'Nosifer' ,font: "36px Nosifer"}).setOrigin(.5);
+        
 
         //game camera actions
         this.cameras.main.setBounds(0, 0, 700 * 2.12, 700 * 5.5);
@@ -251,4 +254,3 @@ const config = {
   };
   
   const game = new Phaser.Game(config);
-  console.log(window)
