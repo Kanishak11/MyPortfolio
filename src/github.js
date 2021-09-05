@@ -1,8 +1,8 @@
-export function github()
+export function github(url)
 {
     
 
-    var url = 'https://github.com/Kanishak11'
+   
 
     var s = window.open(url, '_blank');
 
