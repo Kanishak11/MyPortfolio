@@ -88,7 +88,7 @@ class Example extends Phaser.Scene
             this.clearTint();
         });
         //text4 Education
-        var text4 = this.add.text(window.innerWidth*(.5), 800, "Eduction", { font: "74px Arial Black", fill: "#fff" }).setOrigin(.5);
+        var text4 = this.add.text(window.innerWidth*(.5), 800, "Education", { font: "74px Arial Black", fill: "#fff" }).setOrigin(.5);
         text4.setStroke('#00f', 16);
         text4.setShadow(2, 2, "#333333", 2, true, true);
         var text5 = this.add.text(window.innerWidth*(.5), 920, "B.Tech (EE)", { fontFamily: 'Nosifer' ,font: "40px Nosifer"}).setOrigin(.5);
